@@ -12,7 +12,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let saler = SalerModel()
+        saler.s_name = "saler"
+        saler.age = 20
+        saler.sex = "male"
+        
+        let manager = ManagerModel()
+        manager.m_name = "manager"
+        manager.age = 21
+        manager.sex = "female"
+        
+        let s_model = AdapterModel(saler)
+        let m_model = AdapterModel(manager)
+        
+        print("saler: name=\(String(describing: s_model.name!)) manager: name=\(String(describing: m_model.name!))")
+
     }
 
 
